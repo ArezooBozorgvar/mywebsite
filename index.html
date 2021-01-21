@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
-      *{padding: 15px;}
+    html{
+      background-image: url('https://www.atrafloor.com/app/uploads/2017/01/argyle-diamond-pattern-flooring-blue.jpg');
+    }   
+    .wrapper{
+      width: 80%;
+      margin: 0 auto;
+      -webkit-box-shadow: 15px 5px 13px -6px #000000; 
+box-shadow: 15px 5px 13px -6px #000000;
+    }   
     .header{
       width: 100%;
       height: 100px;
@@ -9,16 +20,20 @@
       background-color: antiquewhite;    
       color: black;
       text-align: center;
+      padding: 15px;
+      border-radius: 15px 15px 0 0;
       }
       .main{
       width: 100%;
       height: 600px;
       margin: 0 auto;
       background-color: rgb(143, 21, 133); 
-      background-image: url(https://miro.medium.com/max/700/0*E0oXyDylhIc78F2q);
+      background-image: url(https://miro.medium.com/max/8000/1*kTRbXbHeiRgRbW4BDmhgvg.jpeg);
+      background-size: cover;
       background-repeat: no-repeat;   
       color:white;
       text-align: center;
+      padding: 15px;
       }
       .footer{
         width: 100%;
@@ -27,23 +42,74 @@
       background-color: #252225;    
       color:white;
       text-align: center;
+      padding: 15px;
+      border-radius: 0 0 15px 15px;
       }
+      .left-side{
+        width: 40%;
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 15px;
+        margin-top: 10%;
+        padding: 25px;
+      }
+      h2{color: azure; text-align: center;}
+      .btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+      .btn-warning {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
   </style>
-<body>
+    </head>  
+<body onload="typeWriter()">
+  <div class="wrapper">
     <div class="header">
-        <h1>welcome to my github page :) </h1>
-        <p>I'm hosted with GitHub Pages.</p>
-    </div>
-  <div class="main">
-      <p>This is the page of arezoo bozorgvar on github that you watching!.</p>
-      <p>I'm interested in programming and learning about it
-        I put content on WikiWook that you can read if you wish </p>
-        <a href="http://wikiwook.ir/blog/"></a>
+      <h1>welcome to my github page :) </h1>
+      <p id="msg"></p>
   </div>
-  <div class="footer">
-      <p>Follow me on Instagram</p>
-      <a href="https://instagram.com/iam_arezoooo?igshid=1f1xmzf41jpsw"><img src="https://farsgraphic.com/wp-content/uploads/2020/07/4.png" alt="instagram" width="20" height="20"></a>
+<div class="main">
+  <div class="left-side">
+    <h2>About Me!</h2>
+    <p>This is the page of arezoo bozorgvar on github that you watching!.</p>
+    <p>I'm interested in programming and learning about it
+      I put content on WikiWook that you can read if you wish </p>
+      <a class="btn btn-warning" target="_blank" href="http://wikiwook.ir/blog/">wikiwook site</a>
   </div>
- 
+</div>
+<div class="footer">
+    <p>Follow me on Instagram</p>
+    <a href="https://www.instagram.com/iam_arezoooo/" target="_blank"><i class="fa fa-instagram" style="font-size:48px;color:red"></i></a>
+</div>
+  </div>    
+  <script>
+    var i = 0;
+    var txt = 'I\'m hosted with GitHub Pages.';
+    var speed = 70;
+    
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("msg").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    </script>
 </body>
 </html>
